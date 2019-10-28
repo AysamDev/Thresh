@@ -1,0 +1,34 @@
+package Square;
+public class Car {
+	
+	private String model;
+	private int engine;
+	private double weight;
+	
+	public Car(String model,int engine,double weight)
+	{
+		this.model=model;  //comparing to C programming Car.model = model; etc...
+		this.engine=engine;
+		this.weight=weight;
+	}/* 3 Arguments constructor*/
+	public String toString()
+	{
+		return "Model: "+model+".\n"+"Engine: "+engine+".\n"+"Weight: "+weight+"KG.";
+	} //tostring() java compiler internally calls for tostring()
+	
+	public static void start()
+	{
+		System.out.print("I'm Moving!!!\n\n");
+	}/*start function*/
+	
+	public static void main(String[] args) {
+		Car car1 = new Car("Nissan",3400,1220);
+		Car car2 = new Car("Ford",2000,1415);
+		System.out.println(car1);
+		start();
+		System.out.println(car2);
+		start();
+	
+	}/* main */
+
+}/* Class Car*/

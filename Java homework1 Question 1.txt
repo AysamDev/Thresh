@@ -1,0 +1,28 @@
+package Square;
+
+public class Square {
+	private int height;
+	private int width;
+	private char ch;
+	
+	public Square(int r,int c,char d){
+		for(int i = 0;i<r;i++) {
+			for(int j = 0;j<c;j++)
+				{
+				System.out.print(d);
+				}
+			System.out.print("\n");
+			}
+	} //function that prints the selected character in rows and columns
+	
+	public Square()
+	{
+		System.out.println("ERROR You need to send 3 arguments.");
+	} //if the user did not send any arguments/8
+	
+	public static void main(String[] args) {
+		new Square();
+		
+	}/*Main*/
+
+}/* class Square*/ 
