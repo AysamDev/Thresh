@@ -1,0 +1,56 @@
+package aysam;
+import java.util.Scanner;
+public class Scan {
+	public static void main(String[] args) {
+		Scanner myObj = new Scanner(System.in);
+		
+		String Name;
+		String Email;
+		String ID;
+		String Info;
+		
+		System.out.println("Enter Your Name please: ");
+		Name = myObj.nextLine();
+		System.out.println("Enter Your Email Please: ");
+		Email = myObj.nextLine();
+		System.out.println("Enter Your ID please: ");
+		ID = myObj.nextLine();
+		System.out.println("Which Info You Would Like To See: Email,Name,ID,all,exit");
+		Info = myObj.nextLine();
+		switch(Info)
+		{
+		case "Email":
+			{
+			System.out.println("Your Email is:"+Email);
+			break;
+			}
+		case "Name":
+			{
+			System.out.println("Your Name is:"+Name);	
+			break;
+			}
+		case "ID":
+			{	
+			System.out.println("Your ID is:"+ID);
+			}
+		case "all":
+			{
+				System.out.println("Your Email is:"+Email);
+				System.out.println("Your Name is:"+Name);
+				System.out.println("Your ID is:"+ID);
+				break;
+			}
+		case "exit":
+			{
+			System.out.println("You are about to Exit the Software");
+			break;
+			}
+			default:
+			{
+				System.out.println("Invaild Input");
+			}
+		}
+		
+	}
+
+}
