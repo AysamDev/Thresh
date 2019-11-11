@@ -1,0 +1,70 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Bonus {
+	private  static int player1;
+	private static int bot;
+	
+	public Bonus()  /*Constructor that reset the Variables to 0*/
+	{
+		this.player1 = 0;
+		this.bot = 0;
+	}/*Bonus*/
+	
+	static void Add_Player1() /* Adds +1 To Player 1*/
+	{
+		player1++;
+	}/*Add_Player1*/  
+	
+	static void Add_Bot()  /*Adds +1 to Bot*/
+	{
+		bot++;
+	}/*Add_bot*/
+	
+	public static int GRI(int min,int max) /* function that returns int in RANGE*/
+	{
+		Random r =new Random();
+		return r.nextInt((max - min) + 1) + min;		
+	}/* GENERATE RANDOM INT */
+	
+	public static void main(String[] args) {
+		boolean a = true;
+		Random rand = new Random();
+		System.out.println("Welcome to MatchNum Game that's how the Game is played:\nInsert an random number between 1-10 and if you are lucky enough you will win.");
+		Scanner myobj = new Scanner(System.in);
+		
+		do {
+			
+			System.out.println("Enter Random Number Between 1 and 10");
+			
+			int number = myobj.nextInt(); /*Input from the user */
+			
+			if(number == GRI(1,10)) /*checks if the number which was generated randomly by the game is equal to the number the user inserted*/
+			{
+				Add_Player1();
+			}
+			
+			else
+			{
+				Add_Bot();
+			}
+			
+			if(player1 == 10) /*if Player1 has won */
+			{
+				System.out.println("Congraulations You have won!!!!! Way To Go You Badass.");
+				System.out.println("You Have Scored = "+player1);
+				System.out.println("Bot Has Scored = "+bot);
+				a = false;
+			}
+			
+			else if(bot == 10) /*if the computer has won */
+			{
+				System.out.println("Ohhhh Nooo You Lost!!! Better Luck Next Time!!You Neeed to select the numbers carefully.");
+				System.out.println("You Have Scored = "+player1);
+				System.out.println("Bot Has Scored = "+bot);
+				a = false;
+			}
+			
+		}while(a == true); /*Do->While Ends HERE*/
+	}
+
+}

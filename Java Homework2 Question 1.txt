@@ -1,0 +1,78 @@
+import java.util.Scanner;
+import java.util.Random;
+import java.util.Arrays;
+public class Aysam {
+public static int arr[] = new int[10];
+public static int arr2[] = new int[10];
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		for(int i = 0;i<arr.length;i++)
+		{
+			do {
+			System.out.println("Enter Number between 10 and 100: ");
+			arr[i] = obj.nextInt();
+			if(!(arr[i]>=10&&arr[i]<=100))
+			{
+				System.out.println("Enter A Number Between 10-100 ONLY PLEASE1");
+			}
+			
+			   }while(arr[i]<10 || arr[i]>100); /*Do-While*/
+		}/*for*/
+		System.out.println("Enter Number: ");
+		int a = obj.nextInt();
+		Random r = new Random();
+		for(int i = 0;i<arr2.length;i++)
+		{
+			arr2[i] = r.nextInt(100-10)+10;
+		}
+		
+		if(arr.equals(arr2)) /*Checks if the Two Arrays are Equal */
+		{
+			System.out.println("The Two Arrays Are Equal");
+		}
+		else
+		{
+			System.out.println("The Two Arrays Are Not Equal!!!");
+		}
+		
+		if(Arrays.binarySearch(arr2,a) == -1) /*check if the number is found in the array2*/
+		{
+			System.out.println("The Element was not found in the random Array");
+		}
+		else
+		{
+			System.out.println("The Following Element is found in index: "+Arrays.binarySearch(arr2,a)+"and the Value of the number is ="+a);
+		}
+		
+		System.out.println("First Array: ");
+		for (int i = 0;i<arr.length;i++) /*prints the first Array before Sort*/
+		{
+			System.out.print(arr[i]+", ");
+		}
+		
+		
+		System.out.println("\nSecond Array: ");
+		
+		for(int i = 0;i<arr2.length;i++)/*Prints the Second Array before Sort*/
+		{
+			System.out.print(arr2[i]+", ");
+		}
+		System.out.println();
+		Arrays.sort(arr);
+		Arrays.sort(arr2);
+		System.out.println("First Array After Sort: ");
+		
+		for (int i = 0;i<arr.length;i++) /*prints the first Array after Sort*/
+		{
+			System.out.print(arr[i]+", ");
+		}
+		
+		System.out.println("\nSecond Array After Sort: ");
+		for(int i = 0;i<arr2.length;i++)/*Prints the Second Array after Sort*/
+		{
+			System.out.print(arr2[i]+", ");
+		}
+		
+	}
+
+}/*Aysam*/
