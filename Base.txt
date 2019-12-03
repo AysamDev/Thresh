@@ -1,0 +1,23 @@
+package Exercise4;
+
+public class Base {
+	public int id;
+	public String name;
+	public Base(int _id,String _name)
+	{
+		id = _id;
+		name = _name;
+		
+	}/* Base class*/
+	
+	public void printB()
+	{
+		System.out.println("ID is: " + id + "\nName is : "+ name + "\n");
+	}/* printB function*/
+
+	public void printName()
+	{
+		System.out.println("Name is : "+ name + "\n");
+		
+	}
+}

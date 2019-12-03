@@ -1,0 +1,18 @@
+package Exercise4;
+
+public class SpaceShip extends Fuels{
+	public String spaceship;
+	public SpaceShip(int _id,String _name,String _fuel,String _sname)
+	{
+		super(_id,_name,_fuel);
+		spaceship = _sname;
+		
+	}/* SpaceShip Class */
+	
+	public void printB()
+	{
+		System.out.println("ID is: " + id + "\nName is : "+ name + "\nName of the Spaceship = "+ spaceship + "\nType of Fuel: "+ fuelType+"\n");
+		
+	}/*printB function*/
+
+}

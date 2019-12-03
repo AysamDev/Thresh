@@ -1,0 +1,15 @@
+package Exercise4;
+
+public class FlyShip extends SpaceShip{
+
+	public FlyShip(int _id,String _name,String _fuel,String _sname)
+	{
+		super(_id,_name,_fuel,_sname);
+		
+	}/* SpaceShip Class */
+	
+	public void Launch()
+	{
+		System.out.println("The Spaceship: " +spaceship +"\nPrepare to launch in 10 9 8 7 6 5 4 3 2 1...\n");
+	}/* Launch Function*/
+}

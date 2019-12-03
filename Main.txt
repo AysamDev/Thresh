@@ -1,0 +1,29 @@
+package Exercise4;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+	Base a = new Base(200100300,"Aysam");
+	a.printB();
+	SpaceShip s = new SpaceShip(100200300,"Matan","Gasoline","Apollo 11");
+	s.printB();
+	Vehicle v = new Vehicle(300200100,"Jony","Gasoline","Volkswagen Polo");
+	v.printB();
+	FlyShip f = new FlyShip(100200300,"Matan","Gasoline","Apollo 11");
+	f.Launch();
+	
+	Base[] all = new Base [4]; /*array that contains all of the 4 classes were built */
+	all[0] = new Base(200100300,"Matan"); /*first class*/
+	all[1] = new SpaceShip(100200300,"Aysam","Electric","Rick's Spaceship"); /*spaceship class*/
+	all[2] = new Vehicle(300200100,"Daniel","Gasoline","Kia Picanto"); /*car brand class*/
+	all[3] = new FlyShip(100200300,"Shaked","Gasoline","Apollo 16"); /*also flyship class*/
+	
+	for (int i = 0;i<all.length;i++)
+		{
+		all[i].printB(); /*prints each class using Base class array */
+		all[i].printName(); /*prints all the names of the different classes above */
+		}	
+	}/* main*/
+
+}

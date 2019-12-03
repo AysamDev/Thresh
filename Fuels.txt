@@ -1,0 +1,12 @@
+package Exercise4;
+
+public class Fuels extends Base{
+	public String fuelType;
+	public Fuels(int _id,String _name,String _fuel)
+	{
+		super(_id,_name);
+		fuelType = _fuel;
+		
+	}/* Fuels Class*/
+	
+}
