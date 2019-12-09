@@ -1,0 +1,36 @@
+package HW4;
+
+public class Suite extends Room{
+	public Suite()
+	{
+		
+	}
+	public Suite(int _q,boolean b,String s)
+	{
+		setQuantity(_q);
+		setIsOccupied(b);
+		setIsType(s);
+	}
+	public void roomType()
+	{
+		System.out.println("Room type: "+ getType() +" Room");
+	}
+	
+	public void checkOccupy()
+	{
+		if(getOccupied() == true)
+		{
+			System.out.println("The room "+getType() +" is not available");
+		}
+		else
+			System.out.println("The room "+getType() +" is available");
+	}
+	
+	
+	public void max()
+	{
+		System.out.println("Maximum persons in the room are: " + getQuantity());
+	}
+
+}
+

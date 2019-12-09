@@ -1,0 +1,55 @@
+package HW4;
+/* abstract is the combination of interface and inheritance. */
+abstract public class Room {
+	private int quantity;
+	private boolean isOccupied;
+	private String isType;
+	
+	public void setIsType(String s)
+	{
+		isType = s;
+	}/*isType*/
+	
+	public String getType()
+	{
+		return isType;
+	}
+	public void setQuantity(int q)
+	{
+		quantity = q;
+	}/* setQuantity*/
+	
+	public int getQuantity()
+	{
+		return quantity;
+	}/* getQuantity */
+	
+	public void setIsOccupied(boolean b)
+	{
+		isOccupied = b;
+	}
+	
+	public boolean getOccupied()
+	{
+		return isOccupied;
+	}/* getOccupied */
+	
+	
+	public void sendCleaner()
+	{
+		System.out.println("Send cleaner to the "+ getType() +" room now!");
+	}/*sendCleaner*/
+	
+	public void sendJanitor()
+	{
+		System.out.println("Send janitor to the "+ getType() +" room now!");
+	}/* sendJanitor */
+	
+	abstract public void roomType(); // we just declare the abstract function that we must use in all the other classes
+	
+	abstract public void checkOccupy(); // checks the availability of the room 
+	
+	abstract public void max(); // checks maximum person in the room
+	
+	
+}

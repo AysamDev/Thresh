@@ -1,0 +1,24 @@
+package HW4;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Room[] a = new Room[4];
+		a[0] = new Standard(2,true,"Standard");
+		a[1] = new Deluxe(3,false,"Deluxe");
+		a[2] = new Suite(4,true,"Suite");
+		a[3] = new Family(5,false,"Family");
+		for(Room s : a)
+		{
+			s.roomType();
+			s.sendCleaner();
+			s.sendJanitor();
+			
+		}
+		a[1].checkOccupy();
+		a[2].max();
+		a[3].roomType();
+	}/* Main */
+
+}
